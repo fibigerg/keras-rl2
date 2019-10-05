@@ -382,7 +382,8 @@ class NAFLayer(Layer):
     def call(self, x, mask=None):
         # TODO: validate input shape
 
-        assert (len(x) == 3)
+        print('x.shape', x.shape)
+        assert (x.shape == 3)
         L_flat = x[0]
         mu = x[1]
         a = x[2]
